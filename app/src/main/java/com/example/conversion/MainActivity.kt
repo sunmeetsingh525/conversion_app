@@ -1,9 +1,15 @@
+package com.example.conversion
+import android.widget.Spinner
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+
+
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private val conversions = arrayOf(
@@ -21,18 +27,18 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, conversions)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinner.adapter = adapter
+        findViewById<Spinner>(R.id.spinner).adapter = adapter
 
-        convertButton.setOnClickListener { convert() }
+        findViewById<Button>(R.id.convertButton).setOnClickListener { convert() }
     }
 
     private fun convert() {
-        val input = inputEditText.text.toString()
+        val input = findViewById<EditText>(R.id.inputEditText).text.toString()
         if (input.isNotEmpty()) {
             val inputValue = input.toDouble()
-            val selectedConversion = spinner.selectedItemPosition
+            val selectedConversion = findViewById<Spinner>(R.id.spinner).selectedItemPosition
             val result = performConversion(inputValue, selectedConversion)
-            outputTextView.text = result.toString()
+            findViewById<TextView>(R.id.outputTextView).text = result.toString()
         }
     }
 
