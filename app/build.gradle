@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.conversion' // Add the namespace attribute here
+    namespace 'com.example.conversion'
     compileSdk 33
 
     defaultConfig {
