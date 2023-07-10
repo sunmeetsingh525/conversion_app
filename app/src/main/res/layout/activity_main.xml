@@ -9,6 +9,18 @@
     android:gravity="center"
     tools:context=".MainActivity">
 
+    <!-- Heading TextView -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="8dp"
+        android:text="Calculator"
+        android:textColor="#808080"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
     <!-- EditText for user input -->
     <EditText
         android:id="@+id/inputEditText"
