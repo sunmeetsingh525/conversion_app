@@ -9,6 +9,7 @@
     android:gravity="center"
     tools:context=".MainActivity">
 
+    <!-- EditText for user input -->
     <EditText
         android:id="@+id/inputEditText"
         android:layout_width="match_parent"
@@ -16,12 +17,14 @@
         android:inputType="numberDecimal"
         android:hint="Enter a value" />
 
+    <!-- Spinner for selecting the conversion type -->
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp" />
 
+    <!-- Button to initiate the conversion -->
     <Button
         android:id="@+id/convertButton"
         android:layout_width="wrap_content"
@@ -30,6 +33,7 @@
         android:layout_marginTop="24dp"
         android:text="Convert" />
 
+    <!-- TextView to display the conversion result -->
     <TextView
         android:id="@+id/outputTextView"
         android:layout_width="match_parent"
